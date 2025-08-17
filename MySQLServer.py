@@ -13,8 +13,8 @@ try:
         a.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
         print("Database 'alx_book_store' created successfully!")
 
-except Error as err:
-    print(f"Error: Could not connect to MySQL server. \n{err}")
+except mysql.connector.Error as err:
+    print(f"Error: Could not connect to MySQL server.\n{err}")
 
 finally:
     # Close cursor and connection if they were opened
